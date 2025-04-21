@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Barbers Victory </title>
+  <link rel="stylesheet" type="Image" href="img/LogoPreta-removebg-preview.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white">
+  <!-- Header -->
+  <header class="px-6 py-4 bg-black">
+    <div class="flex flex-col items-center justify-center">
+      <img src="img/LogoPreta-removebg-preview.png" alt="Victory Barbers Logo" class="h-50 w-auto mb-4" />
+      <h1 class="text-3xl font-bold">Camisa Feminina</h1>
+      <p class="text-gray-400 text-sm">Visualize todos os detalhes do produto</p>
+    </div>
+  </header>
+
+  <!-- Imagens do Produto -->
+  <section class="px-6 py-8">
+    <div class="mb-4">
+      <button onclick="showTab('branca')" class="bg-gray-800 px-4 py-2 rounded-l-lg">Modelo Branco</button>
+      <button onclick="showTab('preta')" class="bg-gray-800 px-4 py-2 rounded-r-lg">Modelo Preto</button>
+    </div>
+    <div id="branca" class="tab-content">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <img src="img/WhatsApp Image 2025-04-18 at 21.26.28.jpeg" alt="Frente Branca" class="rounded-lg object-cover" />
+        <img src="img/WhatsApp Image 2025-04-18 at 21.26.28 (1).jpeg" alt="Costas Branca" class="rounded-lg object-cover" />
+      </div>
+    </div>
+    <div id="preta" class="tab-content hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <img src="img/WhatsApp Image 2025-04-18 at 21.12.44.jpeg" alt="Frente Preta" class="rounded-lg object-cover" />
+        <img src="img/WhatsApp Image 2025-04-18 at 21.12.44 (1).jpeg" alt="Costas Preta" class="rounded-lg object-cover" />
+        <img src="img/WhatsApp Image 2025-04-18 at 21.12.43 (1).jpeg" alt="Detalhe Preta" class="rounded-lg object-cover" />
+        <img src="img/WhatsApp Image 2025-04-18 at 21.12.43.jpeg" alt="Detalhe 2 Preta" class="rounded-lg object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Detalhes do Produto -->
+  <section class="px-6 pb-12">
+    <h2 class="text-5xl font-semibold mb-2">Descrição</h2>
+    <p class="text-gray-400 mb-4">
+      Tradicional premium off with  <br> Tradicional premium black  <br> <br> ideal para quem busca estilo e conforto. <br> Modelo exclusivo com caimento perfeito e tecido de alta qualidade.
+    </p>
+    <p class="text-white font-bold text-xl mb-4">R$75</p>
+    <a href="https://wa.me/5599999999999?text=Olá!%20Gostaria%20de%20comprar%20a%20camiseta%20feminina%20Victory%20Barbers." target="_blank"
+      class="inline-block bg-white text-black px-6 py-2 rounded-full font-semibold hover:bg-gray-200 transition duration-300">
+      Comprar pelo WhatsApp
+    </a>
+  </section>
+
+  <script>
+    function showTab(color) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => {
+        tab.classList.add('hidden'); // Esconde todas as abas
+      });
+      document.getElementById(color).classList.remove('hidden'); // Mostra a aba selecionada
+    }
+
+    // Exibir a aba branca por padrão ao carregar a página
+    document.addEventListener('DOMContentLoaded', () => {
+      showTab('branca');
+    });
+  </script>
+</body>
+
+</html>
